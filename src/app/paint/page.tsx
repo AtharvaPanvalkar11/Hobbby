@@ -1,10 +1,10 @@
 "use client";
-import { useRouter } from "next/navigation"; // ✅ This is required
+
 // import { useState } from "react";
 
 
-import Home2 from "./p2";
-// import PaintingSlider from "@/components/PaintingSlider";
+
+import PaintingSlider from "@/components/PaintingSlider";
 
 // type Poem = {
 //   id: number;
@@ -14,14 +14,12 @@ import Home2 from "./p2";
 //   createdAt: string;
 // };
 
-export default function Home() {
-  const router = useRouter(); // ✅ Init router
+export default function Home22() {
+ 
   // const [poems, setPoems] = useState<Poem[]>([]);
   // const [form, setForm] = useState({ title: "", content: "", author: "" });
   // const [index, setIndex] = useState(-1);
-  const handleNavigate = () => {
-    router.push("/paint"); // ✅ Replace this with your desired route
-  };
+ 
 
   // useEffect(() => {
   //   fetch("/api/poems")
@@ -66,15 +64,9 @@ export default function Home() {
 
   return (
     <main className="p-6 max-w-4xl mx-auto">
-      <Home2></Home2>
-      <center>
-        <button
-          onClick={handleNavigate}
-          className="mb-4 bg-purple-500 text-white px-4 py-2 rounded"
-        >
-          Go to Paintings Page
-        </button>
-      </center>
+      
+      <PaintingSlider></PaintingSlider>
+      
     </main>
   );
 }
