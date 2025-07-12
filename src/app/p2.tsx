@@ -32,7 +32,9 @@ export default function Home2() {
   return (
     <main className="p-6 max-w-2xl mx-auto">
       <center>
-        <h2 className="text-xl font-semibold mt-10 mb-4">My Poems</h2>
+        <h2 className="text-3xl font-serif font-bold text-center text-pink-200 mt-12 mb-6 drop-shadow-sm">
+          My Poem Book
+        </h2>
       </center>
 
       {poems.length > 0 && (
