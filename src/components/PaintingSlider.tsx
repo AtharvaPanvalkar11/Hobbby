@@ -28,24 +28,24 @@ export default function PaintingSlider() {
       .catch(console.error);
   }, []);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   const formData = new FormData(e.currentTarget);
 
-    const res = await fetch("/api/paintings", {
-      method: "POST",
-      body: formData,
-    });
+  //   const res = await fetch("/api/paintings", {
+  //     method: "POST",
+  //     body: formData,
+  //   });
 
-    if (res.ok) {
-      const newPainting = await res.json();
-      setPaintings((prev) => [newPainting, ...prev]);
-      e.currentTarget.reset();
-      setIndex(0);
-    } else {
-      alert("Upload failed");
-    }
-  };
+  //   if (res.ok) {
+  //     const newPainting = await res.json();
+  //     setPaintings((prev) => [newPainting, ...prev]);
+  //     e.currentTarget.reset();
+  //     setIndex(0);
+  //   } else {
+  //     alert("Upload failed");
+  //   }
+  // };
 
   const nextPainting = () => {
     if (paintings.length === 0) return;
@@ -121,7 +121,7 @@ export default function PaintingSlider() {
           </button>
         </div>
       )}
-
+{/* 
       <form
         onSubmit={handleSubmit}
         encType="multipart/form-data"
@@ -169,7 +169,7 @@ export default function PaintingSlider() {
         >
           Upload Painting
         </button>
-      </form>
+      </form> */}
     </div>
   );
 }
