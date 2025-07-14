@@ -121,7 +121,7 @@ export default function PaintingSlider() {
           </button>
         </div>
       )}
-
+ 
       <form
         onSubmit={handleSubmit}
         encType="multipart/form-data"
@@ -162,6 +162,7 @@ export default function PaintingSlider() {
           required
           className="w-full border px-4 py-2 rounded text-gray-800 bg-gray-50"
         />
+        
 
         <button
           type="submit"
@@ -169,7 +170,8 @@ export default function PaintingSlider() {
         >
           Upload Painting
         </button>
-      </form>
+      </form> 
     </div>
   );
 }
+
